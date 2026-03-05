@@ -4,16 +4,16 @@ const router = Router();
 
 // Database sementara di memori
 let users = [
-  { id: 1, name: "Surti", email: "john@example.com" },
-  { id: 2, name: "Tejo", email: "jane@example.com" },
+  { id: 1, name: "Surti", email: "Surti1987@gmail.com" },
+  { id: 2, name: "Tejo", email: "Tedjo1927@gmail.com" },
 ];
 
-// 1. GET ALL - Mengambil semua user
+// 1. GET ALL - Mengambil semua user r
 router.get("/", (req, res) => {
   res.status(200).json(users);
 });
 
-// 2. POST - Menambah user baru
+// 2. POST - Menambah user baru c
 router.post("/", (req, res) => {
   const { name, email } = req.body;
   
@@ -27,7 +27,7 @@ router.post("/", (req, res) => {
   res.status(201).json({ message: "User created!", data: newUser });
 });
 
-// 3. PUT - Mengupdate data user berdasarkan ID
+// 3. PUT - Mengupdate data user berdasarkan ID U
 router.put("/:id", (req, res) => {
   const { id } = req.params;
   const { name, email } = req.body;
@@ -42,7 +42,7 @@ router.put("/:id", (req, res) => {
   }
 });
 
-// 4. DELETE - Menghapus user
+// 4. DELETE - Menghapus user 
 router.delete("/:id", (req, res) => {
   const { id } = req.params;
   const initialLength = users.length;
